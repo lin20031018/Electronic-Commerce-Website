@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>後台管理</title>
+    <link rel="stylesheet" href="backstyle.css">
+</head>
+<body>
+
+    <header>
+        <h1>後台管理</h1>
+    </header>
+    <main>
+        <aside>
+            <div class="section">
+                <form action="add_product.jsp" method="post">
+					<h2>新增</h2>
+					<div class="new-section">
+						<div class="dropdown-section">
+							<select name="category">
+								<option value="squareplantpot">方盆系列</option>
+								<option value="rhinoplantpot">犀力系列</option>
+								<option value="kilnplantpot">窯瓷系列</option>
+								<option value="cementplantpot">水泥系列</option>
+								<option value="glassplantpot">玻璃系列</option>
+								<option value="homegoods">居家小物</option>
+							</select>
+						</div>
+						<div class="input-container">
+							<input type="text" name="productName" placeholder="商品名稱" required>
+							<input type="text" name="productDescription" placeholder="商品介紹" required>
+							<input type="text" name="productImage" placeholder="商品照片" required>
+							<input type="text" name="productPrice" placeholder="商品價格" required>
+							<input type="text" name="productStock" placeholder="商品庫存" required>
+						</div>
+					</div>
+					<div class="submit-container">
+						<button type="submit">送出</button>
+					</div>
+				</form>
+            </div>
+            
+            <div class="section">
+                <form action="delete_product.jsp" method="post">
+					<h2>刪除</h2>
+					<div class="delete-section">
+						<div class="dropdown-section">
+							<select name="category">
+								<option value="squareplantpot">方盆系列</option>
+								<option value="rhinoplantpot">犀力系列</option>
+								<option value="kilnplantpot">窯瓷系列</option>
+								<option value="cementplantpot">水泥系列</option>
+								<option value="glassplantpot">玻璃系列</option>
+								<option value="homegoods">居家小物</option>
+							</select>
+						</div>
+						<div class="input-container">
+							<input type="text" name="productName" placeholder="商品名稱" required>
+						</div>
+					</div>
+					<div class="submit-container">
+						<button type="submit">送出</button>
+					</div>
+				</form>
+            </div>
+        </aside>
+        
+        <section>
+            <div class="user-info">
+                <img src="img/user.png" alt="Avatar">
+                <h2>植管人你好</h2>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="index.jsp">回到主頁</a></li>
+                    <li><a href="allproduct.jsp">商品頁</a></li>
+                    <li><a href="show_order.jsp">查看全部訂單</a></li>
+                </ul>
+            </div>
+        
+        </section>
+    </main>
+</body>
+</html>

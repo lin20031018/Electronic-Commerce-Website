@@ -1,0 +1,356 @@
+* {
+    box-sizing: border-box;
+    margin: 0px auto;
+}
+
+nav {
+    background-color: rgb(215, 215, 215);
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 14px 16px;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.corner{
+    float: right;
+    position: absolute;
+    top: 29px;
+    right: 24px;
+    display: flex;
+    height: auto;
+    flex-direction: row;
+}
+
+.cart img {
+    width: 30px;
+    cursor: pointer;
+    margin-right:8px;
+    margin-left:8px;
+}
+
+.user img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.user,
+.cart {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: #333;
+    cursor: pointer;
+}
+
+h1{
+    font-weight: normal;
+    margin-top: 20px;
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 3px solid rgb(215, 215, 215); 
+    color: #444444;
+    line-height: 0.1em;
+} 
+ 
+h1 span{ 
+    background:#fff; 
+    padding: 0 10px; 
+}
+
+.all{
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    grid-gap: 50px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+.products{
+    background-color: white;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    grid-gap: 40px;
+    padding: 20px 50px 0px 50px;
+}
+
+/*要買的產品*/
+.selected{
+    background-color: #f6f6f6;
+    height: 260px;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: grid;
+    grid-template-columns: 200px 600px;
+    grid-auto-flow: row;
+    grid-gap: 80px;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+.img{
+    margin:40px 50px 30px 50px;
+    width:180px;
+    height: 180px;
+    background-color: #333;
+}
+
+.img img{
+    width: 180px;
+    height: 180px;
+}
+
+.content{
+    padding-top: 45px;
+    padding-right: 70px;
+    text-align: left;
+    width: 100%;
+}
+
+#quantity{
+    font-size: 36px;
+}
+
+.content h3{
+    font-weight: normal;
+    color:#444444;
+    margin: 10px 0px;
+    align-content: center;
+}
+
+.content hr{
+    border: 1px solid rgb(215, 215, 215);
+}
+
+/*產品內容*/
+.words{
+    display: flex;
+    flex-direction: row;
+}
+
+.line{
+    border: 1px solid rgb(201, 201, 201);
+    width: 100%;
+    grid-column: 1/4;
+}
+
+/*用戶資訊區*/
+.below{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row;
+    padding: 100px auto 100px auto;
+    align-items: center;
+    color: #333333;
+    grid-gap: 0px;
+    margin-top: 30px;
+}
+
+/*資訊標題*/
+.block1{
+    background-color: white;
+    width: 100%;
+    padding: 10px 30px;
+    font-size: 25px;
+    color: #444444;
+}
+
+/*用戶資訊內容*/
+.block2{
+    background-color: white;
+    width: 100%;
+    padding: 10px 30px;
+    font-size: 25px;
+    color: #444444;
+    text-align: right;
+}
+
+/*取貨方式*/
+.block2 select{
+    margin-top: 5px;
+    background-color: #f6f6f6;
+    font-size: 25px;
+    color: #444444;
+    text-align: right;
+    border: 2px solid rgb(215, 215, 215);
+}
+
+.block1 p, .block2 p{
+    margin-top: 5px;
+}
+
+/*上一頁和確認送出按鈕*/
+.buttons{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row;
+}
+
+#prev{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border: none;
+    font-size: 25px;
+    color:#333333;
+    background-color:rgb(215, 215, 215);
+    width: 50%;
+    grid-column: 1/2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 50px;
+}
+
+#send{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border: none;
+    font-size: 25px;
+    color:white;
+    background-color: #4CAF50;
+    width: 50%;
+    grid-column: 2/3;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 50px;
+}
+
+#send:hover, #prev:hover{
+    background-color: #333333;
+    color: rgb(215, 215, 215);
+}
+
+#send:active, #prev:active {
+    background-color: #333333;
+    color: rgb(215, 215, 215);
+    box-shadow:none;
+    transform: translateY(4px);
+}
+
+.pop-content h2, #bank{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #333333;
+    margin-top: 5px;
+    font-size: 20px;
+} 
+
+.pop section{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.backOnce{
+    padding: 10px;
+    border: none;
+    font-size: 25px;
+    color:#333333;
+    background-color:rgb(215, 215, 215);
+    width: 20%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.paid{
+    padding: 10px;
+    border: none;
+    font-size: 25px;
+    color:white;
+    background-color:#4CAF50;
+    width: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*彈出已成功送出訂單*/
+.pop2, .pop {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    animation: modalFadeIn 0.3s;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.pop2-content, .pop-content {
+    background-color: #f6f6f6;
+    margin: 15% auto;
+    padding: 10px;
+    border: 4px solid rgb(215, 215, 215);
+    width: 30%;
+    height: 23%;
+    animation: modalPopUp 0.3s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@keyframes modalFadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes modalPopUp {
+    from {transform: scale(0.5);}
+    to {transform: scale(1);}
+}
+
+.pop2-content h2{
+    text-align: center;
+    color: #333333;
+    margin-top: 10px;
+}
+
+/*送出後返回首頁*/
+.back{
+    display: flex;
+    height:auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin-top: 15px;
+    border: none;
+    font-size: 25px;
+    color:#333333;
+    background-color:rgb(215, 215, 215);
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.back:hover, .backOnce:hover, .paid:hover {
+    background-color: #333333;
+    color: rgb(215, 215, 215);
+    text-decoration: none;
+}
+
+.back:active, .backOnce:active, .paid:active {
+    background-color: #333333;
+    color: rgb(215, 215, 215);
+    box-shadow:none;
+    transform: translateY(4px);
+}
+
+div a {
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
